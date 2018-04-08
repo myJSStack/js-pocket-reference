@@ -45,4 +45,23 @@ infinity or negative infinity.
 - Number.isNaN() does not convert the values to a Number, and will not return true for any value that is not of the type Number.
 
 ### String
-- 
+- Single and double quote, and you know how to use them combined!
+- `\` escape character 
+- length is a property
+- Perfect set of methods
+- It is important that to remember, strings are immutable in JS
+-  + is used to concatanate.
+```
+var s = "hello, world" // Start with some text.
+s.charAt(0) // => "h": the first character.
+s.charAt(s.length-1) // => "d": the last character.
+s.substring(1,4) // => "ell": chars 2, 3, and 4
+s.slice(1,4) // => "ell": same thing
+s.slice(-3) // => "rld": last 3 characters
+s.indexOf("l") // => 2: position of first l.
+s.lastIndexOf("l") // => 10: position of last l.
+s.indexOf("l", 3) // => 3: position at or after 3
+s.split(", ") // => ["hello", "world"]
+s.replace("h", "H") // => "Hello, world": // replaces all instances
+s.toUpperCase() // => "HELLO, WORLD"
+```
