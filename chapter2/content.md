@@ -89,9 +89,9 @@ n + " objects" // => "NaN objects": NaN -> "NaN"
 - Conversion are automatic, but may want to push to make you code cleaner using `Boolean()`, `Number()`, `String()` or `Object()`
 - Note that any value other than null or undefined has a `toString()` method and the result of this method is usually the same as that returned by the String() function.
 - working with financial or scientific data
-`var n = 123456.789;
+```
+var n = 123456.789;
 n.toFixed(2); // "123456.79"
 n.toExponential(3); // "1.235e+5"
-n.toPrecision(7); // "123456.8"``
-
+n.toPrecision(7); // "123456.8"
 ```
