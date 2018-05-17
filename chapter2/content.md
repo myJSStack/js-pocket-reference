@@ -6,7 +6,7 @@
 - JS Variables are `untyped`, meaning you can assign it to a number now, 10 mins later you can assign it to a String
 
 ### Numbers
-- No diffrence between intergers, and floating point numbers
+- No diffrence between intergers, and floating point numbers :laughing:
 - Numbers are 64 bits floating point precison. However to interger values it is performed on 32-bit digits
 - base-10 numbers are common.
 - base-16 values are written in strings of `"0x"` or `"0X"`
@@ -31,9 +31,9 @@ Math.log(100)/Math.LN10 // Base 10 logarithm of 100
 Math.log(512)/Math.LN2 // Base 2 logarithm of 512
 Math.exp(3) // Math.E cubed
 ```
-- Arithmetic in JavaScript does not raise errors in cases of overflow, underflow, or division by zero.
-- When the result of a numeric operation is larger than the largest representable number (overflow), the result is a special infinity value, which Java-Script prints as Infinity. Similarly, when a negative value becomes larger than the largest representable negative number, the result is negative infinity, printed as -Infinity.
-- Division by zero is not an error in JavaScript: it simply returns infinity or negative infinity.
+- Arithmetic in JavaScript does not raise errors in cases of overflow, underflow, or division by zero.:sweat_smile:
+- When the result of a numeric operation is larger than the largest representable number (overflow), the result is a special infinity value, which Java-Script prints as Infinity. Similarly, when a negative value becomes larger than the largest representable negative number, the result is negative infinity, printed as -Infinity.:fearful:
+- Division by zero is not an error in JavaScript: it simply returns infinity or negative infinity.:fearful:
 - NaN: zero divided by zero, Infinity divided by Infinity, sqrt(a negative number)
 - `== Nan` doesn't work  => `isNaN()` is the ONE :) 
 - Note1: global isNaN() function, converts the tested value to a Number, then tests it.
@@ -44,7 +44,7 @@ Math.exp(3) // Math.E cubed
 - `\` escape character 
 - length is a property
 - Perfect set of methods
-- It is important that to remember, strings are immutable in JS
+- It is important that to remember, **strings are immutable** in JS
 -  + is used to concatenate.
 ```
 var s = "hello, world" // Start with some text.
@@ -63,7 +63,7 @@ s.toUpperCase() // => "HELLO, WORLD"
 
 ### Booleans
 - ok: true/false
-- All true (objects, and arrays are included) unless 6 falsy values
+- All true (objects, and arrays are included) unless 6 falsy values :imp:
 ```
 undefined
 null
@@ -78,7 +78,7 @@ NaN
 - All global variable are property of the global object,
 
 ### Type Conversion
-- JS converts everything to something it is expected to see!
+- JS converts everything to something it is expected to see! (:sweat_smile: OMG!)
 ```
 Some examples:
 10 + " objects" // => "10 objects". 10 -> string
@@ -88,7 +88,7 @@ n + " objects" // => "NaN objects": NaN -> "NaN"
 ```
 - Conversion are automatic, but may want to push to make you code cleaner using `Boolean()`, `Number()`, `String()` or `Object()`
 - Note that any value other than null or undefined has a `toString()` method and the result of this method is usually the same as that returned by the String() function.
-- working with financial or scientific data
+- working with financial or scientific data  :heart_eyes:
 ```
 var n = 123456.789;
 n.toFixed(2); // "123456.79"
