@@ -57,5 +57,9 @@ the newly created object is discarded.
 - Addition (+) The binary + operator adds numeric operands or concatenates string operands :sweat_smile:  The conversion rules for + give priority to string concatenation.
 - Unary plus (+): converts its operand to a number
 (or to NaN) and returns that converted value. When used with an operand that is already a number, it doesn’t do anything.
-- 
+
+<A chunk of content is left - low battery reasons - No time but add them later...>
+
+#### The delete Operator
+- delete is a unary operator that attempts to delete the object property or array element specified as its operand. 
 
