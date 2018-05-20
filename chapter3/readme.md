@@ -58,8 +58,26 @@ the newly created object is discarded.
 - Unary plus (+): converts its operand to a number
 (or to NaN) and returns that converted value. When used with an operand that is already a number, it doesn’t do anything.
 
-<A chunk of content is left - low battery reasons - No time but add them later...>
+****A chunk of content is left - low battery reasons - No time but add them later...****
 
 #### The delete Operator
 - delete is a unary operator that attempts to delete the object property or array element specified as its operand. 
-
+```
+var o = {x:1, y:2}, a = [1,2,3];
+delete o.x; // Delete a property of o
+"x" in o // => false: the property does not exist
+delete a[2]; // Delete the last element of the array
+2 in a // => false: array element 2 doesn't exist
+```
+#### The Comma Operator (,)
+- The comma operator is a binary operator whose operands may be of any type. It evaluates its left operand, evaluates its right
+operand, and then returns the value of the right operand. The left-hand expression is always evaluated, but its value is discarded,
+which means that it only makes sense to use the comma operator when the left-hand expression has side effects. The only situation in which the comma operator is commonly used is with a for loop that has multiple loop variables:
+```
+// The first comma below is part of the syntax of the
+// var statement. The second comma is the comma operator:
+// it lets us squeeze 2 expressions (i++ and j--) into a
+// statement (the for loop) that expects 1.
+for(var i=0,j=10; i < j; i++,j--)
+ console.log(i+j);
+```
