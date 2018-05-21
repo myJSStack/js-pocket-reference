@@ -68,8 +68,29 @@ finally {
 with (object)
  statement
 ```
-***Never use it, it will be depricated. ***
+***Never use it, it will be depricated.***
 
 ### debugger
 - The debugger statement normally does nothing. If, however, a debugger program is available and is running, then an implementation
 may (but is not required to) perform some kind of debugging action. In practice, this statement acts like a breakpoint: execution of JavaScript code stops and you can use the debugger to print variables’ values, examine the call stack, and so on. 
+
+### “use strict”
+- Introduced in JS5, and is ingonred by ECMAScrip3. (it is a directive not an expression)
+- Used to tell that the codes are in `strict mode`
+1. The with statement is not allowed in strict mode.
+2. In strict mode, all variables must be declared: a ReferenceError is thrown if you assign a value to an identifier that
+is not a declared variable, parameter, or property of the global object. (In nonstrict mode, this implicitly declares
+a global variable by adding a new property to the global object.)
+3. In strict mode, functions invoked as functions (rather than as methods) have a this value of undefined. (In nonstrict
+mode, functions invoked as functions are always passed the global object as their this value.) This difference can be used to determine whether an implementation supports strict mode:
+```
+var hasStrictMode = (function() {
+ "use strict";
+ return this === undefined;
+}());
+```
+4. In strict mode, assignments to nonwritable properties and attempts to create new properties on nonextensible objects throw a TypeError.
+5. In strict mode, code passed to eval() cannot declare variables or define functions in the caller’s scope as it can in
+nonstrict mode. Instead, variable and function definitions live in a new scope created for the eval(). This scope is discarded when the eval() returns.
+6. In strict mode, octal integer literals (beginning with a 0 that is not followed by an x) are not allowed. (In nonstrict mode, some implementations allow octal literals.)
+7. In strict mode, the identifiers eval and arguments are treated like keywords, and you are not allowed to change their value. 
