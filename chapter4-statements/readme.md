@@ -1,5 +1,5 @@
 # Statements
-Expressions are evaluated to produce a value, but statements are executed to make something happen.
+**Expressions are evaluated to produce a value**, but **statements are executed to make something happen**.
 - Conditionals are statements
 - Loops
 - Jumps 
