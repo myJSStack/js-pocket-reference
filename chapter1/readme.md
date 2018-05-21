@@ -5,7 +5,7 @@
 
 ## Idnetifier, and Reserved words
 - ECMAScript 3 took evey reserved words from Java.
-- ECMAScript 5 relaxed in these words and removed some them. But it added some reserved words for the `strict mode`, and `furtur versions`
+- ECMAScript 5 relaxed in these words and removed some them. But it added some reserved words for the `strict mode`, and `future versions`
 
 ## Semicolons
 - It is optional, but USE it please.
