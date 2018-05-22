@@ -5,10 +5,13 @@ can evaluate to produce a value`.  For simplicity, we sometimes say that an oper
 - Initializers (for arrays, and objects are called literals)
 
 ### Property Access
-`expression . identifier` `expression [ expression ]`
-- Well which one? :confused:
-dot is simplere and easier, [] is harder! BUT If the property name is a reserved word or includes spaces or punctuation characters, or when it is a number (for arrays), you
-must use the square bracket notation. Square brackets are also used when the property name is not static but is itself the result of a computation.
+1. Dot access `expression . identifier` 
+2. Bracket access `expression [ expression ]`
+
+#### Well which one to use? :confused:
+- Dot is simpler and easier to use, bracket is harder! 
+- If the property name is a reserved word or includes spaces or punctuation characters, or when it is a number (for arrays), you must use the square bracket notation. 
+- Square brackets are also used when the property name is not static but is itself the result of a computation.
 
 ### Function expresion vs. function declaration
 What is a Function Declaration?
