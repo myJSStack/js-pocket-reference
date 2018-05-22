@@ -6,7 +6,7 @@
 - JS Variables are `untyped`, meaning you can assign it to a number now, 10 mins later you can assign it to a String
 
 ### Numbers
-- No diffrence between intergers, and floating point numbers :laughing:
+- No difference between integers, and floating point numbers  :laughing:
 - Numbers are _64 bits floating point precison_. However to _interger values it is performed on 32-bit digits_
 - base-10 numbers are common.
 - base-16 values are written in strings of `"0x"` or `"0X"`
