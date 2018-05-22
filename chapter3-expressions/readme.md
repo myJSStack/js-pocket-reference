@@ -42,6 +42,10 @@ var a = function bar() {
     alert("hello!");
 })();
 ```
+
+#### Invocation
+- Output of a function invocation is expected from return. ***If there is no return the it is undefined***.
+
 ### Object Creation
 ```
 new Object()
@@ -52,16 +56,43 @@ new Date
 Functions written for use as constructors do not return a value, and the value of the object creation expression is the newly created and initialized object. If a constructor does return an object value, that value becomes the value of the object creation expression and
 the newly created object is discarded.
 ### Operators
-- Operators with higher precedence are performed before those with lower precedence.
+- Operators with higher precedence are performed before those with lower precedence.(check the book table)
 - Operator precedence can be overridden with the explicit use of parentheses.
+
 #### Arithmetic Operators
 - In JavaScript, however, all numbers are floating-point, so all division operations have floatingpoint results: 5/2 evaluates to 2.5, not 2. Division by zero yields positive or negative infinity, and 0/0 evaluates to NaN: neither of these cases raises an error :sweat_smile:.
 - Modulo (%):  The sign of the result is the same as the sign of the first operand. For example, 5 % 2 evaluates to 1 and -5 % 2 evaluates to -1. :sweat_smile: This operator is typically used with integer operands, but it also works for floating-point values. For example, 6.5 % 2.1 evaluates to 0.2 :sweat_smile:.
 - Addition (+) The binary + operator adds numeric operands or concatenates string operands :sweat_smile:  The conversion rules for + give priority to string concatenation.
 - Unary plus (+): converts its operand to a number
 (or to NaN) and returns that converted value. When used with an operand that is already a number, it doesn’t do anything.
+- Increment (++): It s operand must be a `lvalue`
+- bitwise operators: `Bitwise AND (&)`, `Bitwise OR (|)`, `Bitwise XOR (^)`, `Bitwise NOT (~)`, `Shift left (<<)`, `Shift right with sign (>>)`, `Shift right with zero fill (>>>)`
 
-****A chunk of content is left - low battery reasons - No time but add them later...****
+#### comparison expressions
+- Relational expressions always evaluate to a boolean value, and that value is often used to control the flow of program execution in if, while, and for statements. `==`, `===`, `!==`, `<=`, `>=`, Property existence `(in)`
+- `Loose equality ` vs `strict equality`:second one check for type and value, first one only check for the value(there is also casting involved.)
+```
+1 == "1"
+true == 1
+"1" == true
+false == 0
+[] == 0
+```
+
+#### logical expressions
+- perform Boolean algebra and are often used in conjunction with the relational operators to combine two relational expressions into one more complex expression. These guys are alos tricky. Becareful!
+```
+// If max_width is defined, use that. Otherwise look
+// for a value in the preferences object. If that is
+// not defined use a hard-coded constant.
+var max = max_width || preferences.max_width || 500;
+```
+
+#### assignment expressions
+- JavaScript uses the = operator to assign a value to a variable, object property, or array element
+- Besides the normal = assignment operator, JavaScript supports a number of other assignment operators that provide shortcuts by combining assignment with some other operation.`=+`,`+-`, `=*`, `=/`, `=%`
+
+
 
 #### The delete Operator
 - delete is a unary operator that attempts to delete the object property or array element specified as its operand. 
