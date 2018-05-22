@@ -21,6 +21,13 @@ The for/in loop does not actually enumerate all properties of an object, only th
 A return statement may appear only within the body of a function. It is a syntax error for it to appear anywhere else. 
 - With no return statement, a function invocation simply executes each of the statements in the function body in turn until it reaches the end of the function, and then returns to its caller. In this case, the invocation expression evaluates to undefined.
 - The return statement can also be used without an expression to make the function return undefined before it reaches the end of its body.
+```
+function display_object(o) {
+ // Return immediately if o is null or undefined.
+ if (!o) return;
+ // Rest of function goes here...
+}
+```
 
 ### throw expression;
 - An exception is a signal that indicates that some sort of exceptional condition or error has occurred. 
@@ -29,13 +36,7 @@ A return statement may appear only within the body of a function. It is a syntax
 - The Error class and its subclasses are used when the JavaScript interpreter itself throws an error, and **you can use them as well.**
 -  An **Error object** has a **name property** that specifies the type of error and a **message property** that holds the string passed to the constructor function
 - Exception handlers are written using the catch clause of the try/catch/finally statement.
-```
-function display_object(o) {
- // Return immediately if o is null or undefined.
- if (!o) return;
- // Rest of function goes here...
-}
-```
+
 
 ### try/catch/finally
 - The try/catch/finally statement is JavaScript’s exception handling mechanism. 
