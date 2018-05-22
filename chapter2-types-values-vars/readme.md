@@ -80,7 +80,7 @@ NaN
 - All global variable are property of the global object
 - In client-side JavaScript, the Window object serves as the global object. 
 ```
-
+var global = this; // /refer to the global object
 ```
 
 ### Type Conversion
