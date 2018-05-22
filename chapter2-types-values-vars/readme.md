@@ -1,13 +1,13 @@
 ## Types, Values, and Variables
 - Date types in JS: Primitives, Objects
-- Primitive data type (3+2): `Number`, `Boolean`, `String`.
+- Primitive data type (3+2): `Number`, `Boolean`, `String`. + `Symbol` (added in ES6).
 - Object data type(3): `Object`, `Array`, `function`.
 - Also, we have `undefined` (type=undefined), and `null` (type=object) as _primitives_.
 - JS Variables are `untyped`, meaning you can assign it to a number now, 10 mins later you can assign it to a String
 
 ### Numbers
 - No difference between integers, and floating point numbers  :laughing:
-- Numbers are _64 bits floating point precison_. However to _interger values it is performed on 32-bit digits_
+- Numbers are _64 bits floating point precision_. However to _interger values it is performed on 32-bit digits_
 - base-10 numbers are common.
 - base-16 values are written in strings of `"0x"` or `"0X"`
 - Exponential notation in JS is like `[digits][.digits][(E|e)[(+|-) digits]]`
@@ -77,7 +77,11 @@ NaN
 - Null, and undefined both have no value in them, no property, no method.
 
 ### Global Object
-- All global variable are property of the global object,
+- All global variable are property of the global object
+- In client-side JavaScript, the Window object serves as the global object. 
+```
+
+```
 
 ### Type Conversion
 - JS converts everything to something it is expected to see! (:sweat_smile: OMG!)
@@ -90,7 +94,8 @@ n + " objects" // => "NaN objects": NaN -> "NaN"
 ```
 - Conversion are automatic, but may want to push to make you code cleaner using `Boolean()`, `Number()`, `String()` or `Object()`
 - Note that any value other than null or undefined has a `toString()` method and the result of this method is usually the same as that returned by the String() function.
-- working with financial or scientific data  :heart_eyes:
+- Check out following articles for casting.Most of the time the outputs are tricky.[1](https://medium.freecodecamp.org/js-type-coercion-explained-27ba3d9a2839), [2](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical_operators)
+- Working with financial or scientific data  :heart_eyes:
 ```
 var n = 123456.789;
 n.toFixed(2); // "123456.79"
