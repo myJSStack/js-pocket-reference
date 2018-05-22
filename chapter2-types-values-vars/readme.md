@@ -108,10 +108,10 @@ n.toPrecision(7); // "123456.7"
 - You can also declare multiple variables with the same var keyword
 - You can combine variable declaration with variable initialization
 - If you don’t specify an initial value for a variable with the var statement, the variable is declared, but its value is undefined until your code stores a value into it.
--It is legal and harmless to declare a variable more than once with the var statement. If the repeated declaration has an initializer,
+- It is legal and harmless to declare a variable more than once with the var statement. If the repeated declaration has an initializer,
 it acts as if it were simply an assignment statement.:stuck_out_tongue: !
-- BUT ERRORS  > If you attempt to read the value of an undeclared variable :fist:, 
-**Historically, however, and in nonstrict mode, if you assign a value to an undeclared variable, JavaScript actually creates that variable as a property of the global object, and it works much like a properly declared global variable. This means that you can get away with leaving your global variables undeclared. This is a bad habit and a source of bugs, however, and you should always declare your variables with var.
+- _BUT ERRORS PART_ > If you attempt to read the value of an undeclared variable :fist:, 
+***Historically, however, and in nonstrict mode, if you assign a value to an undeclared variable, JavaScript actually creates that variable as a property of the global object, and it works much like a properly declared global variable. This means that you can get away with leaving your global variables undeclared. This is a bad habit and a source of bugs, however, and you should always declare your variables with var.***
 
 - **Scopes**:  globals, and function body-> {} <- inputs to the function
 JavaScript **does not have block scope**, Instead, JavaScript **uses function scope: variables are visible within the
