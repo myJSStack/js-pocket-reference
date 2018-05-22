@@ -92,6 +92,25 @@ var max = max_width || preferences.max_width || 500;
 - JavaScript uses the = operator to assign a value to a variable, object property, or array element
 - Besides the normal = assignment operator, JavaScript supports a number of other assignment operators that provide shortcuts by combining assignment with some other operation.`=+`,`+-`, `=*`, `=/`, `=%`
 
+#### Evaluation Expressions
+-  JavaScript has the ability to interpret strings of JavaScript source code, evaluating them to produce a value. JavaScript does this with the global function eval()
+- If you find yourself using eval(), you should think carefully about whether you really need to use it.
+- If it successfully parses the string, then it evaluates the code and returns the value of the last expression
+or statement in the string, or undefined if the last expression or statement had no value. 
+- If the evaluated string throws an exception, that exception propagates from the call to eval().
+-  If it calls eval("x=1"), it changes the value of the local variable. 
+- if ali = eval(....), then it has only access to global variables.
+
+#### The Conditional Operator (?:)
+- The conditional operator is the only ternary operator (three operands) in JavaScript.
+- the ?: operator often provides a handy shortcut.
+```
+greeting = "hello " + (user.name ? user.name : "there");
+```
+
+#### The typeof Operator
+- typeof is a unary operator that is placed before its single operand, which can be of any type. Its value is a string that
+specifies the type of the operand.
 
 
 #### The delete Operator
