@@ -1,13 +1,13 @@
 ## Types, Values, and Variables
 - Date types in JS: Primitives, Objects
-- Primitive data type: `Number`, `Boolean`, `String`.
-- Object data type: `Object`, `Array`, `function`.
-- Also, we have undefined (type=undefined), and null (type=object)
+- Primitive data type (3+2): `Number`, `Boolean`, `String`.
+- Object data type(3): `Object`, `Array`, `function`.
+- Also, we have `undefined` (type=undefined), and `null` (type=object) as _primitives_.
 - JS Variables are `untyped`, meaning you can assign it to a number now, 10 mins later you can assign it to a String
 
 ### Numbers
 - No diffrence between intergers, and floating point numbers :laughing:
-- Numbers are 64 bits floating point precison. However to interger values it is performed on 32-bit digits
+- Numbers are _64 bits floating point precison_. However to _interger values it is performed on 32-bit digits_
 - base-10 numbers are common.
 - base-16 values are written in strings of `"0x"` or `"0X"`
 - Exponential notation in JS is like `[digits][.digits][(E|e)[(+|-) digits]]`
@@ -31,11 +31,11 @@ Math.log(100)/Math.LN10 // Base 10 logarithm of 100
 Math.log(512)/Math.LN2 // Base 2 logarithm of 512
 Math.exp(3) // Math.E cubed
 ```
-- Arithmetic in JavaScript does not raise errors in cases of overflow, underflow, or division by zero.:sweat_smile:
-- When the result of a numeric operation is larger than the largest representable number (overflow), the result is a special infinity value, which Java-Script prints as Infinity. Similarly, when a negative value becomes larger than the largest representable negative number, the result is negative infinity, printed as -Infinity.:fearful:
+- Arithmetic in JavaScript **does not raise errors in cases of overflow, underflow, or division by zero**.:sweat_smile:
+- When the result of a numeric operation is larger than the largest representable number (overflow), the result is a special infinity value, which Java-Script prints as _Infinity_. Similarly, when a negative value becomes larger than the largest representable negative number, the result is negative infinity, printed as _-Infinity_.:fearful:
 - Division by zero is not an error in JavaScript: it simply returns infinity or negative infinity.:fearful:
 - NaN: zero divided by zero, Infinity divided by Infinity, sqrt(a negative number)
-- `== Nan` doesn't work  => `isNaN()` is the ONE :) 
+- `== Nan` doesn't work  => `isNaN()` is the ONE :) however, `NaN has the typeof number`
 - Note1: global isNaN() function, converts the tested value to a Number, then tests it.
 - Note2: Number.isNaN() does not convert the values to a Number, and will not return true for any value that is not of the type Number.
 
@@ -45,7 +45,7 @@ Math.exp(3) // Math.E cubed
 - length is a property
 - Perfect set of methods
 - It is important that to remember, **strings are immutable** in JS
--  + is used to concatenate.
+-  + is used to **concatenate**. and numbers are casted to the strings when combining with Strings 
 ```
 var s = "hello, world" // Start with some text.
 s.charAt(0) // => "h": the first character.
@@ -60,6 +60,8 @@ s.split(", ") // => ["hello", "world"]
 s.replace("h", "H") // => "Hello, world": // replaces all instances
 s.toUpperCase() // => "HELLO, WORLD"
 ```
+- slice is shared with arrays, more powerful,accepts negative numbers.
+- substring can swap two inputs when needed!
 
 ### Booleans
 - ok: true/false
@@ -72,7 +74,7 @@ null
 NaN
 "" // the empty string
 ```
-- Null, and undefined both have no value in them, no property, no method
+- Null, and undefined both have no value in them, no property, no method.
 
 ### Global Object
 - All global variable are property of the global object,
