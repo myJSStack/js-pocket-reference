@@ -43,3 +43,29 @@ var o2 = Object.create(null);
 // o3 is like {} or new Object().
 var o3 = Object.create(Object.prototype);
 ```
+
+### Properties
+#### Property Inheritance
+- JavaScript objects have a set of “own properties,” and they also inherit a set of properties from their prototype object.
+```
+// o inherits object methods from Object.prototype
+var o = {}
+o.x = 1; // and has an own property x.
+// p inherits properties from o and Object.prototype
+var p = inherit(o);
+p.y = 2; // and has an own property y.
+```
+
+#### Deleting Properties
+- The delete operator removes a property from an object.
+```
+delete book.author; // book now has no author.
+delete book["main title"]; // or a "main title", either.
+```
+
+#### Testing Properties
+- `hasOwnProperty()`: method of an object tests whether that object has an own property with the given name. _It returns false for inherited properties._
+- `propertyIsEnumerable()`: method refines the hasOwnProperty() test. It returns true only if the named property is an own
+property and its enumerable attribute is true.
+- `in operator`:r expects a property name (as a string) on its left side and an object on its right. It returns true if the object has
+an own property or an inherited property by that name.
