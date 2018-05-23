@@ -69,3 +69,21 @@ delete book["main title"]; // or a "main title", either.
 property and its enumerable attribute is true.
 - `in operator`:r expects a property name (as a string) on its left side and an object on its right. It returns true if the object has
 an own property or an inherited property by that name.
+#### Enumerating Properties
+- Properties created by normal JavaScript code are enumerable.
+- Built-in methods that objects inherit are not enumerable, but the properties that your code adds to objects are enumerable (unless you use one of the functions described later to make them nonenumerable).
+-  To guard against this, you might want to filter the properties returned by for/in. Here are two ways 
+```
+for(p in o) {
+ if (!o.hasOwnProperty(p)) // Skip inherited props
+ continue;
+}
+```
+
+or 
+```
+for(p in o) {
+ if (typeof o[p] === "function") // Skip methods
+ continue;
+}
+```
