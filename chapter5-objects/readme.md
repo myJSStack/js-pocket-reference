@@ -72,7 +72,7 @@ an own property or an inherited property by that name.
 #### Enumerating Properties
 - Properties created by normal JavaScript code are enumerable.
 - Built-in methods that objects inherit are not enumerable, but the properties that your code adds to objects are enumerable (unless you use one of the functions described later to make them nonenumerable).
--  To guard against this, you might want to filter the properties returned by for/in. Here are two ways 
+-  To guard against this, you might want to filter the properties returned by `for/in`. Here are two ways 
 ```
 for(p in o) {
  if (!o.hasOwnProperty(p)) // Skip inherited props
@@ -87,3 +87,11 @@ for(p in o) {
  continue;
 }
 ```
+- `Object.keys()`:  which returns an array of the names of the enumerable own properties of an object.
+- `Object.getOwnPropertyNames()`:  It works like Object.keys() but returns the names of all the own properties of the specified object, not just the enumerable properties.
+
+#### Serializing Properties and Objects
+- Object serialization is the process of converting an object’s state to a string from which it can later be restored. `JSON.stringify()`, `JSON.parse()` to serialize and restore JavaScript objects. These functions use the JSON data interchange format.
+- JSON stands for “JavaScript Object Notation,”
+- Note that JSON syntax is a subset of JavaScript syntax, and it cannot represent all JavaScript values. Objects, arrays, strings,
+finite numbers, true, false, and null are supported and can be serialized and restored.
