@@ -64,10 +64,10 @@ delete book["main title"]; // or a "main title", either.
 ```
 
 #### Testing Properties
-1. `hasOwnProperty()`: method of an object tests whether that object has an own property with the given name. _It returns false for inherited properties._
-2. `propertyIsEnumerable()`: method refines the hasOwnProperty() test. It returns true only if the named property is an own
+1. (Specific)`hasOwnProperty()`: method of an object tests whether that object has an own property with the given name. _It returns false for inherited properties._
+2. (More Specific)`propertyIsEnumerable()`: method refines the hasOwnProperty() test. It returns true only if the named property is an own
 property and its enumerable attribute is true.
-3. `in operator`: expects a property name (as a string) on its left side and an object on its right. It returns true if the object has
+3. (General)`in operator`: expects a property name (as a string) on its left side and an object on its right. It returns true if the object has
 an own property or an inherited property by that name.
 
 #### Enumerating Properties
