@@ -33,7 +33,7 @@ var o = new Object()
 // o1 inherits properties x and y.
 var o1 = Object.create({x:1, y:2});
 ```
-2.
+2. It has not prototype, or inherit anything.
 ```
 // o2 inherits no properties or methods.
 var o2 = Object.create(null);
