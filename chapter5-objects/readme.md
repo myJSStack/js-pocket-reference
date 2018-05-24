@@ -96,3 +96,46 @@ for(p in o) {
 - JSON stands for “JavaScript Object Notation,”
 - Note that JSON syntax is a subset of JavaScript syntax, and it cannot represent all JavaScript values. Objects, arrays, strings,
 finite numbers, true, false, and null are supported and can be serialized and restored.
+
+#### Property Getters and Setters
+```
+var o = {
+ // An ordinary data property
+ data_prop: value,
+  // An accessor property as a pair of functions
+ get accessor_prop() { /* return value */ },
+ set accessor_prop(value) { /* set value */ }
+};
+```
+#### Property Attributes
+- Introduced with ECMAScript 5 API.
+- In addition to a name and value, properties have attributes that specify whether they can be written, enumerated, and configured.
+- we’ll even say that the value of a data property is an attribute as well. Thus, we can say that a property has a name and four attributes. The four attributes of a data property are `value`, `writable`, `enumerable, and `configurable`.
+-  Four attributes of an accessor property are `get`, `set`, `enumerable`, and `configurable`
+```
+var o = {}; // Start with no properties at all
+// Add a nonenumerable data property x with value 1.
+Object.defineProperty(o, "x", { value : 1,
+ writable: true,
+ enumerable: false,
+ configurable: true});
+ // Check that the property is there but is nonenumerable
+o.x; // => 1
+Object.keys(o) // => []
+// Now modify the property x so that it is read-only
+Object.defineProperty(o, "x", { writable: false });
+// Try to change the value of the property
+o.x = 2; // Fails silently or TypeError in strict mode
+o.x // => 1
+// The property is still configurable,
+// so we can change its value like this:
+Object.defineProperty(o, "x", { value: 2 });
+o.x // => 2
+// Now change x to an accessor property
+Object.defineProperty(o, "x", {
+ get: function() { return 0; }
+});
+o.x // => 0
+ ```
+ 
+..... will be continued.
