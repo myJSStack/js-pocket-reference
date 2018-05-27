@@ -69,6 +69,7 @@ delete book["main title"]; // or a "main title", either.
 property and its enumerable attribute is true.
 3. (General)`in operator`: expects a property name (as a string) on its left side and an object on its right. It returns true if the object has
 an own property or an inherited property by that name.
+***Instead of using the in operator, it is often sufficient to simply query the property and use !== to make sure it is not undefined***
 
 #### Enumerating Properties
 - Properties created by normal JavaScript code are enumerable.
