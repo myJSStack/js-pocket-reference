@@ -109,35 +109,24 @@ var o = {
  set accessor_prop(value) { /* set value */ }
 };
 ```
-#### Property Attributes (ECMAScript 5)
+#### Property Attributes (ECMAScript 5): value, writable(boolean), enumerable (boolean), and configurable (boolean)
 - Introduced with ECMAScript 5 API.
-- In addition to a name and value, properties have attributes that specify whether they can be written, enumerated, and configured.
-- we’ll even say that the value of a data property is an attribute as well. Thus, we can say that a property has a name and four attributes. The four attributes of a data property are `value`, `writable`(boolean), `enumerable` (boolean), and `configurable` (boolean).
--  Four attributes of an accessor property are `get`, `set`, `enumerale` (boolean) and `configurable` (boolean)
+- The four attributes of a data property are `value`, `writable`(boolean), `enumerable` (boolean), and `configurable` (boolean).
+- Four attributes of an accessor property are `get`, `set`, `enumerale` (boolean) and `configurable` (boolean)
 - The ECMAScript 5 methods for this is  property descriptor.
-- To get attribute descriptions
-```
-// Returns {value: 1, writable:true,
-// enumerable:true, configurable:true}
-Object.getOwnPropertyDescriptor({x:1}, "x");
-// Query the theta property of the p object from above.
-// Returns { get: /*func*/, set:undefined,
- enumerable:true, configurable:true}
-Object.getOwnPropertyDescriptor(p, "theta");
-```
-
-- To set attribute descriptions
+- To get attribute descriptions use `Object.getOwnPropertyDescriptor(obj, "property_name")`
+- To set attribute descriptions:
 ```
 var o = {}; // Start with no properties at all
 // Add a nonenumerable data property x with value 1.
 Object.defineProperty(o, "x", { value : 1,
- writable: true,
- enumerable: false,
- configurable: true});
+   writable: true,
+   enumerable: false,
+   configurable: true});
  
  // Check that the property is there but is nonenumerable
-o.x; // => 1
-Object.keys(o) // => []
+  o.x; // => 1
+  Object.keys(o) // => []
 
 // Now modify the property x so that it is read-only
 Object.defineProperty(o, "x", { writable: false });
@@ -157,20 +146,20 @@ Object.defineProperty(o, "x", {
 o.x // => 0
  ```
  - You do not have to include all four attributes to make a change.
- - 
-#### Object Attributes (ECMAScript 5)
-- `prototype`, `class`, `extensible`
+ 
+### Object Attributes (ECMAScript 5): `prototype`, `class`, `extensible`
 
-- `Object.getPrototypeOf()`, `isPrototypeOf() method`
+#### prototype
+- `Object.getPrototypeOf()`, `isPrototypeOf()
 - Note that isPrototypeOf() performs a function similar to the instanceof operator.
 
+#### class
 - An object’s class attribute is a string that provides informationabout the type of the object. 
+- there is only an indirect technique for querying it. The default toString() method
 
+#### extensible
 - The extensible attribute of an object specifies whether new properties can be added to the object or not.
--  To determine whether an object is extensible, pass it to Object.isExtensible().
--  To make an object nonextensible, pass it to Object.preventExtensions().
-- Object.seal() works like Object.preventExtensions(), but in addition to making the object nonextensible, it also makes all
-of the own properties of that object nonconfigurable. 
-- Object.isSealed() to determine whether an object is sealed.
-- Object.freeze() locks objects down even more tightly. In addition to making the object nonextensible and its properties nonconfigurable, it also makes all of the object’s own data properties read-only.
-- there is no way to undo the effects of Object.preventExtensions(), Object.seal(), and Object.freeze()
+- Level one: `Object.isExtensible()`, `Object.preventExtensions()`
+- Level two: (extension+config): `Object.seal()`, `Object.isSealed()`
+- Level three:  (extension+config+nowrite): `Object.freeze()`
+
