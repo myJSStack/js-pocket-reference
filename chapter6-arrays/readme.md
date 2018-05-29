@@ -19,3 +19,16 @@
 - return > 0 value when a is after b
 - return 0 value when a = b
 ```
+4. `concate()`: create and concate the origin array with the one in argument
+5. `slice()`: create and return slice of the array. Arg can be negative
+6. `splice()`: (create and return, also original array isDirty) general-purpose method for adding and removing elements to an array
+```
+- first arg: starting position for add/remove
+- second arg: number of delecting elements
+- 3rd, 4th are the adding elements
+```
+7. `Push()`: in place adds to the end
+8. `Pop()`: in place remove from the end
+9. `unshift()`: in place add to the beginning
+10. `shift()`: in place remove for the beginning.
+11. `toString()`: convert array to string; comma separated. 
