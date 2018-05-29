@@ -32,3 +32,12 @@
 9. `unshift()`: in place add to the beginning
 10. `shift()`: in place remove for the beginning.
 11. `toString()`: convert array to string; comma separated. 
+
+### Array methods introduced in ES5
+12. `forEach()`: 2nd, and 3rd are optional
+```
+forEach(function(value, index, array){
+....
+})
+```
+13. 
