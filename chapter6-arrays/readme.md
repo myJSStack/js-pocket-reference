@@ -40,4 +40,8 @@ forEach(function(value, index, array){
 ....
 })
 ```
-13. 
+13. `map()`: create new mapped array; structure is like forEach()
+14. `filter()`: create newly filtered array, input args are like forEach() but if the returning value is boolean
+15. `every()` equals to "FOR ALL": inside function returns boolean
+16. `some()` equals to "THERE EXIST" : inside function returns boolean
+17.
