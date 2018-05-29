@@ -52,3 +52,16 @@ action function is diffent from the above. function has two args; result so far,
 element found, or –1 if none is found.
 20. `lastIndexOf()`: searches from end to beginning
 
+### Array Type
+- `Array.isArray()`
+
+### Array-Like Objects
+- These “array-like” objects actually do occasionally appear in practice, and although you cannot directly invoke array methods on them or expect special behavior from the length property, you can still iterate through them with the same code you’d use for a true array.
+- Since array-like objects do not inherit from Array.prototype, you cannot invoke array methods on them directly. You can invoke them indirectly using the Function.call method.
+```
+Array.prototype.join.call(a, "+") // => "a+b+c"
+```
+#### Strings as Arrays
+- NOTE: The typeof operator still returns “string” for strings, of course, and the Array.isArray() method returns false if you pass it a
+string.
+- Access to chars inside the string by their index.
