@@ -12,8 +12,10 @@
 1. `Array.join()`: You can specify the separator, if there is noting, then the separator will be camma. (It always come versus with `String.split("")`)
 2. `Array.reverse()`: in place, reserse the order of an array.
 3. `Array.sort()`:in place, sorts alphabetically an array.
+```
 - To sort an array with something other than alphabet, you must pass a comparision function inside.
 - Easy: Two `a,b` inputs, the `function desides` a should come first or b.
 - return < 0 value when a is before b
 - return > 0 value when a is after b
 - return 0 value when a = b
+```
