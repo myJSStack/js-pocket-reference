@@ -44,4 +44,11 @@ forEach(function(value, index, array){
 14. `filter()`: create newly filtered array, input args are like forEach() but if the returning value is boolean
 15. `every()` equals to "FOR ALL": inside function returns boolean
 16. `some()` equals to "THERE EXIST" : inside function returns boolean
-17.
+*** every returns true, and some returns false on an empty array***
+17. `reduce()`:  Output is a single value.  Reduce has two args; action function, initial value for the returning value.
+action function is diffent from the above. function has two args; result so far, and the value
+18. `reduceRight()`:  same as reduce but from right side of array
+19. `indexOf()`: search an array for an element with a specified value, and return the index of the first such
+element found, or –1 if none is found.
+20. `lastIndexOf()`: searches from end to beginning
+
