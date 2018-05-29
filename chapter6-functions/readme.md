@@ -20,3 +20,4 @@
 2. Unlike variables, the this keyword does not have a scope. It is a common mistake to assume that a nested function invoked as a function can use this to obtain the invocation context of the
 outer function. If you want to access the this value of the outer function, you need to store that value into a variable that is in scope for the inner function. It is common to use the variable self for this purpose
 3. ***If a nested function is invoked as a method, its this value is the object it was invoked on. If a nested function is invoked as a function, its this value will be either the global object (nonstrict mode) or undefined (strict mode).***
+
