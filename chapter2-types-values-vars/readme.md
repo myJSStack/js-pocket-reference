@@ -1,5 +1,5 @@
 ## Types, Values, and Variables
-- Date types in JS: Primitives, Objects
+- Data types in JS: Primitives, Objects
 - Primitive data type (3+2): `Number`, `Boolean`, `String`. + `Symbol` (added in ES6).
 - Object data type(3): `Object`, `Array`, `function`.
 - Also, we have `undefined` (type=undefined), and `null` (type=object) as _primitives_.
