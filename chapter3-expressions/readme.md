@@ -1,7 +1,7 @@
 ## Expressions and Operators
 You express yourself, and this express is result of your thoughts! ok same in JS. ` expression is a phrase of JavaScript that a JavaScript interpreter
 can evaluate to produce a value`.  For simplicity, we sometimes say that an operator returns a value rather than “evaluates to” a value
-- Primary expression: `constant &literal values`, `Reserved words ` & ` bare variable reference`
+- Primary expression: `constant` & `literal values`, `Reserved words ` & ` bare variable reference`
 - Initializers (for arrays, and objects are called literals)
 
 ### Property Access
