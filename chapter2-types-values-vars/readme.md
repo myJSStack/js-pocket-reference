@@ -45,7 +45,7 @@ Math.exp(3) // Math.E cubed
 - length is a property
 - Perfect set of methods
 - It is important that to remember, **strings are immutable** in JS
--  + is used to **concatenate**. and numbers are casted to the strings when combining with Strings 
+- plus sign(+) is used to **concatenate**.  Numbers are casted to the Strings when combining with Strings 
 ```
 var s = "hello, world" // Start with some text.
 s.charAt(0) // => "h": the first character.
@@ -56,16 +56,17 @@ s.slice(-3) // => "rld": last 3 characters
 s.indexOf("l") // => 2: position of first l.
 s.lastIndexOf("l") // => 10: position of last l.
 s.indexOf("l", 3) // => 3: position at or after 3
-s.split(", ") // => ["hello", "world"]
+s.split(" ") // => ["hello", "world"]
 s.replace("h", "H") // => "Hello, world": // replaces all instances
 s.toUpperCase() // => "HELLO, WORLD"
+s.toLowwerCase()
 ```
-- slice is shared with arrays, more powerful,accepts negative numbers.
-- substring can swap two inputs when needed!
+- `slice` is shared with arrays. It is more powerful, and accepts negative numbers.
+- `substring` can swap two inputs when needed!
 
 ### Booleans
 - ok: true/false
-- All true (objects, and arrays are included) unless 6 falsy values :imp:
+- All true (objects, and arrays are included) except `6 falsy values` :imp:
 ```
 undefined
 null
