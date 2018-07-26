@@ -1,13 +1,13 @@
 ## Types, Values, and Variables
 - Data types in JS: Primitives, Objects.  (`Boolean`, `Null`, `Undefined`, `Number`, `String`, `Symbol`, `Object`)
-- Primitive data type (3+2): `Number`, `Boolean`, `String`. + `Symbol` (added in ES6)
+- Primitive data type: `Number`, `Boolean`, `String`,`undefined`, `null` + `Symbol` (added in ES6)
 - Object data type(3): `Object`, `Array`, `function`.
 - Also, we have `undefined` (type=undefined), and `null` (type=object) as _primitives_.
-- JS Variables are `untyped`, meaning you can assign it to a number now, 10 mins later you can assign it to a String
+- JS Variables are `untyped`, meaning you can assign it to a number now, 10 mins later you can assign it to a String.
 
 ### Numbers
 - No difference between integers, and floating point numbers  :laughing:
-- Numbers are _64 bits floating point precision_. However to _interger values it is performed on 32-bit digits_
+- Numbers are _64 bits floating point precision_. However for _interger values it performs on 32-bit digits_
 - base-10 numbers are common.
 - base-16 values are written in strings of `"0x"` or `"0X"`
 - Exponential notation in JS is like `[digits][.digits][(E|e)[(+|-) digits]]`
