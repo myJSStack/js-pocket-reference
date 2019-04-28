@@ -22,6 +22,10 @@ Readme material is coming from Udemy [JS6 tutorial](https://www.udemy.com/javasc
     - key is a function, k: function(){}, then we can put k()
 - Default function argument: function(a, b = 'value'); in JS5 we have to check each individual parameters for its existance.
     - Important note: put null is in parameter list if you want to push it as null, if you put undenifed, it will be the default value in it. function(a, null) is correct, and function(a, undefined) will be function(a, value)
+- Rest, Spreed operators: 
+    - Rest operator (gather inputs): ...numbers, we capture all of unkown number of inputs and put them in one array called number
+    - Spreed operator(split inputs): lets say you have two arrays of a,b and you want to contacs them together in a way that you contact their content.  [...a, ...b]
+   
     
 
     
