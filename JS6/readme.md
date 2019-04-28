@@ -10,8 +10,8 @@ Readme material is coming from Udemy [JS6 tutorial](https://www.udemy.com/javasc
     - `every`: all elements in array follow the same rule.
     - `some`: some of the elements in array follow the same rule.
     - `reduce`: internal function takes initial value and element.
-- const/let: we are no longer using damn `var`    
-- 
+- const/let: we are no longer using damn `var`(mother fucker trouble maker)
+- Template strings: back ticks with `${}` where js variables go into this `${}`: just look how it makes it easy to make string of JSON!
 
     
 [Personal] left over practices in the training
