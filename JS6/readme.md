@@ -17,7 +17,9 @@ Readme material is coming from Udemy [JS6 tutorial](https://www.udemy.com/javasc
     - Implicit return (because a single expression): a => a + b 
         - For compact syntax "single argument is needed for the part one. and sinlge expression is needed for the part two.
         - Compact syntax may make it confusing, do not sit on it.
-    
+- Enhanced literal:
+    - if the key and value have the same exact name
+    - key is a function, k: function(){}, then we can put k()
 
     
 [Personal] left over practices in the training
