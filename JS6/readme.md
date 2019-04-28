@@ -20,6 +20,9 @@ Readme material is coming from Udemy [JS6 tutorial](https://www.udemy.com/javasc
 - Enhanced literal:
     - if the key and value have the same exact name
     - key is a function, k: function(){}, then we can put k()
+- Default function argument: function(a, b = 'value'); in JS5 we have to check each individual parameters for its existance.
+    - Important note: put null is in parameter list if you want to push it as null, if you put undenifed, it will be the default value in it. function(a, null) is correct, and function(a, undefined) will be function(a, value)
+    
 
     
 [Personal] left over practices in the training
