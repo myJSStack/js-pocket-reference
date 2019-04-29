@@ -95,7 +95,31 @@ Toyota.prototype = Object.create(Car.prototype);
 Toyota.prototype.constructor = Toyota;
 
 ```
+ok, now lets make a class example in ES6
+```
+class Car {
+    constructor({ title }){
+        this.title = title;
+    }
+    
+    //methods
+    drive() {
+        return 'vroom';
+    }
+}
 
+//
+class Toyota extends Car {
+    constructor(options) {
+        super(options); // car.constructor
+        this.color = options.color;
+    }
+
+    hunnk() {
+        return 'beep';
+    }
+}
+```
     
 [Personal] left over practices in the training
 - Implementing `Pluck`
