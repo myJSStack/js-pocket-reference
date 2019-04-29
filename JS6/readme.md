@@ -230,3 +230,5 @@ const engineeringTeam = {
 - Implementing `findWhere`
 - Implementing `Unique`
 - Review the `when to use arrow functions continue`: very valuable materials
+- Video 60: shows a novel way of iterating through nodes using generators
+- 
