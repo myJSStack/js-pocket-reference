@@ -31,7 +31,39 @@ function(a, b = 'value'); in JS5 we have to check each individual parameters for
     - Rest operator (gather inputs): ...numbers, we capture all of unkown number of inputs and put them in one array called number
     - Spreed operator(split inputs): lets say you have two arrays of a,b and you want to contacs them together in a way that you contact their content.  [...a, ...b]
    
-    
+### Destructing
+This is about accessing to value of keys in objects or arrays. 
+- first scenario [objects]
+``` 
+const { keyName1, KeyName2 } = objectName; 
+```
+
+- 2nd scenario [array] 
+``` 
+const companies = ['Google', 'FaceBook', 'Uber'];
+const [name, name2, ...rest] = companies;
+```
+
+- 3rd scenario: The above to can be combined:[array of objects]
+```
+const companies = [{name:'Google', location:`Mountain View`}, {name:'FaceBook', location:`Menlo Park` }, {name: 'Uber', location: `San Francisco`}];
+
+const [{ location}] = companies; //es5 eaquivalent is companies[0].location
+
+```
+- 4th scenario: object of arrays **most complex so far**: challenging to digest.
+```
+const Google = {
+    locations: ['Mountain View', 'New York', 'London']
+}
+
+const { locations: [location] } = Google; // es5 equivalent: Google.locations[0]
+```
+#### How it can improve the code
+- We pass an object of arguament instead of long list of arguments which is prone to mistake of order.
+
+
+
 
     
 [Personal] left over practices in the training
