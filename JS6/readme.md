@@ -120,7 +120,110 @@ class Toyota extends Car {
     }
 }
 ```
+
+### Generator
+Let's see a quick example. Note to the star sign, and the yield keyword
+```
+function *colors() {
+    yeild 'red';
+    yield 'blue';
+    yield 'green';
+}
+
+const myColor = [];
+for (let color of colors()) {
+    myColors.push(color);
+}
+```
+#### Iteration with generators
+Now, let's look into the second example, that we are moving through an object property selectively
+```
+const engineeringTeam = {
+    size : 3,
+    department : `engineering`,
+    lead : 'Jill',
+    manager: 'Alex',
+    engineer: 'Dave'
+}
+
+function* teamIterator(team) {
+    yield team.lead;
+    yield team.manager;
+    yield team.engineer;
+}
+
+const names = [];
+for (let name of teamIterator()) {
+    names.push(name);
+}
+```
+#### Generator delegation
+let say you have QA team too. Note to * beside yield keyword
+```
+const testingTeam = {
+    lead: 'Amanda',
+    tester: 'Bill'
+}
+
+const engineeringTeam = {
+    testingTeam,
+    size : 3,
+    department : `engineering`,
+    lead : 'Jill',
+    manager: 'Alex',
+    engineer: 'Dave'
+}
+
+function* TeamIterator(team) {
+    yield team.lead;
+    yield team.manager;
+    yield team.engineer;
     
+    // note to this part
+    const testingTeamGenerator = TestingTeamGenerator(team.testingTeam);
+    yeild* testingTeamGenerator;
+}
+
+function* TestingTeamGenerator(team){
+    yeild team.lead;
+    yield team.tester;
+}
+
+const names = [];
+for (let name of teamIterator()) {
+    names.push(name);
+}
+```
+#### Generators with symbol iterator
+This part helps to clean up above codes. The **[Symbol.iterator] is a ES6 new feature.** Its job is to to tell the iterator how to move over an object.
+```
+const testingTeam = {
+    lead: 'Amanda',
+    tester: 'Bill',
+    [Symbol.iterator]: function*() {
+        yield this.lead;
+        yield this.tester;
+    }
+}
+
+const engineeringTeam = {
+    testingTeam,
+    size : 3,
+    department : `engineering`,
+    lead : 'Jill',
+    manager: 'Alex',
+    engineer: 'Dave',
+    [System.iterator]: function*() {
+        yield this.lead;
+        yield this.manager;
+        yield this.engineer;
+        yield* this.testingTeam;
+    }
+}
+```
+
+
+ 
 [Personal] left over practices in the training
 - Implementing `Pluck`
 - Implementing `Reject`
