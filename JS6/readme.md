@@ -62,8 +62,39 @@ const { locations: [location] } = Google; // es5 equivalent: Google.locations[0]
 #### How it can improve the code
 - We pass an object of arguament instead of long list of arguments which is prone to mistake of order.
 
+### Classes
+lets make a class example in ES5
+```
+// CREATING
+// Note that we start with the function keyword
+function Car(options) {
+   this.title = options.title
+   // Note that we do not return a value
+}
+
+// ADDING A METHOD IN IT
+Car.prototype.drive = function(){
+    return 'vroom';
+}
+
+// USING IT
+const car 1 = new Car({title: Prius});
+car1.drive();
 
 
+// INHERITANCE : look how BAD/FUCKED UP it is 
+function Toyota(options) {
+    this.color = option.color;
+    
+    // inheriting a car
+    Car.call(this, options);
+}
+
+// GOSH!!!
+Toyota.prototype = Object.create(Car.prototype);
+Toyota.prototype.constructor = Toyota;
+
+```
 
     
 [Personal] left over practices in the training
