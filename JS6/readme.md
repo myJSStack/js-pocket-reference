@@ -236,9 +236,9 @@ const engineeringTeam = {
 no need to an external library. Get an instace, and pass a function into its constructor.
 ```
 let promise = new Promise((resolve, reject) =>{
-    resolve();
+    // some logic, and then ...resolve();
     
-    // or
+    // or some logic and then
     reject();
 });
 
@@ -248,6 +248,12 @@ promise
     .then(() => {})
     .catch(() => {});
 ```
+#### Fetch helper
+it is used for ajax calls. But at the end of the day it is not behaving a you have seen in giving status. Do not use it for now.
+```
+fetch(url)
+    .then(res => res.json())
+
 
 [Personal] left over practices in the training
 - Implementing `Pluck`
