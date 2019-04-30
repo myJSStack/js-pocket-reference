@@ -222,8 +222,33 @@ const engineeringTeam = {
 }
 ```
 
+### Promises , and Fetch
+- ES6 brings a native implementation of promises.
+- What is a promise? it is used with asyc methods like calls to server side
+- Terminology: We have three states in promises
+    - `unresolved`: waiting for something to finish
+    - `resolved`: something is finished, and it all went ok
+    - `rejected`: somethig is finished, and it went bad.
+- Terminology: after going into resolved or rejected status, it is turn for having a callback via
+    -`then`: on resolve status > we use it to register a callback
+    -`catch`: on reject status > We use it to register a callback
+#### creating promises
+no need to an external library. Get an instace, and pass a function into its constructor.
+```
+let promise = new Promise((resolve, reject) =>{
+    resolve();
+    
+    // or
+    reject();
+});
 
- 
+
+promise
+    .then( () => {})
+    .then(() => {})
+    .catch(() => {});
+```
+
 [Personal] left over practices in the training
 - Implementing `Pluck`
 - Implementing `Reject`
@@ -231,4 +256,4 @@ const engineeringTeam = {
 - Implementing `Unique`
 - Review the `when to use arrow functions continue`: very valuable materials
 - Video 60: shows a novel way of iterating through nodes using generators
-- 
+
