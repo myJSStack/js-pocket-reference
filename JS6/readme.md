@@ -253,7 +253,7 @@ it is used for ajax calls. But at the end of the day it is not behaving a you ha
 ```
 fetch(url)
     .then(res => res.json())
-
+```
 
 [Personal] left over practices in the training
 - Implementing `Pluck`
